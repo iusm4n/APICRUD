@@ -1,0 +1,106 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "users": [
+    {
+      "id": 6,
+      "name": "Ayesha Iqbal",
+      "email": "ayesha.iqbal@example.com",
+      "address": "House No. 12, Street No. 5, Lahore"
+    },
+    {
+      "id": 7,
+      "name": "Bilal Hussain",
+      "email": "bilal.hussain@example.com",
+      "address": "Flat No. 3, Block B, Karachi"
+    },
+    {
+      "id": 8,
+      "name": "Hina Aslam",
+      "email": "hina.aslam@example.com",
+      "address": "Plot No. 7, Sector F, Islamabad"
+    },
+    {
+      "id": 9,
+      "name": "Usman Ali",
+      "email": "usman.ali@example.com",
+      "address": "Village No. 4, Tehsil No. 2, Multan"
+    },
+    {
+      "id": 10,
+      "name": "Zara Khan",
+      "email": "zara.khan@example.com",
+      "address": "Apartment No. 6, Floor 2, Peshawar"
+    },
+    {
+      "title": "New Post",
+      "body": "This is a new post.",
+      "id": 11
+    },
+    {
+      "title": "New Post",
+      "body": "This is a new post.",
+      "id": 12
+    },
+    {
+      "title": "New Post",
+      "body": "This is a new post.",
+      "id": 13
+    },
+    {
+      "title": "New Post",
+      "body": "This is a new post.",
+      "id": 14
+    },
+    {
+      "title": "New Post",
+      "body": "This is a new post.",
+      "id": 15
+    },
+    {
+      "title": "New Post",
+      "body": "This is a new post.",
+      "id": 16
+    },
+    {
+      "title": "New Post",
+      "body": "This is a new post.",
+      "id": 17
+    },
+    {
+      "title": "New Post",
+      "body": "This is a new post.",
+      "id": 18
+    },
+    {
+      "title": "New Post",
+      "body": "This is a new post.",
+      "id": 19
+    },
+    {
+      "title": "New Post",
+      "body": "This is a new post.",
+      "id": 20
+    },
+    {
+      "id": "3",
+      "email": "ghghhggh@gmail.com",
+      "name": "ggfg",
+      "address": "ytghwhgshg"
+    },
+    {
+      "id": "100",
+      "email": "heyyou@gmail.com",
+      "name": "ujhsehjeshj",
+      "address": "hjehjesueuyehju,gheshgrehg"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

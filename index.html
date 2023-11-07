@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h1>Assignment Web</h1>
+
+<button id="get-posts">Get Posts</button>
+<form id="post-form">
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id">
+    <br>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email">
+    <br>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <br>
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address">
+    <br>
+    <button id="create-post">Create Post</button>
+    <button id="update-post">Update Post</button>
+</form>
+<button id="delete-post">Delete Post</button>
+<input type="text" class="idd">
+<div id="output"></div>
+
+<script>
+    const baseUrl = 'http://localhost:3000/users';
+
+    $(document).ready(function() {
+        $('#get-posts').click(function() {
+            $.ajax({
+                url: baseUrl,
+                method: 'GET',
+                success: function(data) {
+                    $('#output').html('All posts: ' + JSON.stringify(data));
+                },
+                error: function(error) {
+                    $('#output').html('Error fetching posts: ' + JSON.stringify(error));
+                }
+            });
+        });
+
+        $('#create-post').click(function() {
+            const newPost = {
+                id: $('#id').val(),
+                email: $('#email').val(),
+                name: $('#name').val(),
+                address: $('#address').val(),
+            };
+
+            $.ajax({
+                url: baseUrl,
+                method: 'POST',
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify(newPost),
+                success: function(data) {
+                    $('#output').html('New post created: ' + JSON.stringify(data));
+                },
+                error: function(error) {
+                    $('#output').html('Error creating post: ' + JSON.stringify(error));
+                }
+            });
+        });
+
+        $('#update-post').click(function() {
+            const postId = $('.idd').val(); // Get the ID from the input field
+            const updatedPost = {
+                id: $('#id').val(),
+                email: $('#email').val(),
+                name: $('#name').val(),
+                address: $('#address').val(),
+            };
+
+            $.ajax({
+                url: baseUrl + '/' + postId,
+                method: 'PUT',
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify(updatedPost),
+                success: function(data) {
+                    $('#output').html('Post updated: ' + JSON.stringify(data));
+                },
+                error: function(error) {
+                    $('#output').html('Error updating post: ' + JSON.stringify(error));
+                }
+            });
+        });
+
+        $('#delete-post').click(function() {
+            const postId = $('.idd').val(); // Get the ID from the input field
+
+            $.ajax({
+                url: baseUrl + '/' + postId,
+                method: 'DELETE',
+                success: function() {
+                    $('#output').html('Post deleted successfully');
+                },
+                error: function(error) {
+                    $('#output').html('Error deleting post: ' + JSON.stringify(error));
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
